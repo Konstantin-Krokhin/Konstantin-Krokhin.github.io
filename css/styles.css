@@ -8,61 +8,78 @@ h1 {
   font-family:Comic Sans MS;
 }
 
+div {
+    display: block;
+}
+
 p {
-  border: 1px solid black;
   background-color: grey;
-  width: 90%;
-  height: 150px;
-  margin-right: auto;
-  margin-left: auto;
   font-family: Comic Sans MS;
   color: white;
-  padding: 8% 4% 4% 4%;
+  padding: 40px 15px 15px 15px;
   border: 2px solid black;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 1em;
+  margin-inline-end: 0px;
 }
 
 .chicken
 {
-  position: relative;
-  top: -30%;
-  left: 80%;
+  float: right;
+  display:block;
   background-color: pink;
-  width: 8%;
-  height: 4%;
   text-align: center;
-  margin: 10px;
-  padding: 5px 10px 5px 10px;
+  margin: 0;
+  width: 230px;
+  height: 45px;
+  margin-block-start: 0.0em;
+  margin-block-end: 0.0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-top: 10px;
   color: black;
   border: 2px solid black;
+  font-weight: bold;
 }
 
 .beef
 {
-  position: relative;
-  top: -30%;
-  left: 86%;
-  background-color: #A52A2A;
-  width: 8%;
-  height: 4%;
+  float: right;
+  display:block;
+  background-color: red;
   text-align: center;
-  margin: 10px;
-  padding: 5px 10px 5px 10px;
+  margin: 0;
+  width: 230px;
+  height: 45px;
+  margin-block-start: 0.0em;
+  margin-block-end: 0.0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-top: 10px;
+  color: white;
   border: 2px solid black;
+  font-weight: bold;
 }
 
 .suchi
 {
-  position: relative;
-  top: -30%;
-  left: 85%;
-  background-color: #E59866;
-  width: 8%;
-  height: 4%;
+  float: right;
+  display:block;
+  background-color: blue;
   text-align: center;
-  margin: 10px;
-  padding: 5px 10px 5px 10px;
-  color: black;
+  margin: 0;
+  width: 230px;
+  height: 45px;
+  margin-block-start: 0.0em;
+  margin-block-end: 0.0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-top: 10px;
+  color: white;
   border: 2px solid black;
+  font-weight: bold;
 }
 
 /* Simple Responsive Framework. */
