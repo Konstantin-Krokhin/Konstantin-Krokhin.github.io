@@ -6,6 +6,8 @@ h1 {
   margin-bottom: 15px;
   text-align: center;
   font-family:Comic Sans MS;
+  font-weight: bold;
+  font-size: 35px;
 }
 
 div {
@@ -23,6 +25,44 @@ p {
   margin-block-end: 1em;
   margin-inline-start: 1em;
   margin-inline-end: 0px;
+}
+
+.navbar-brand span
+{
+  color: black;
+  float: left;
+  font-family: Comic Sans MS;
+  font-size: 28px;
+}
+
+.bd-search-docs-toggle {
+    line-height: 1;
+    color: #212529;
+}
+
+.ml-3, .mx-3 {
+    margin-left: 1rem!important;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #007bff;
+    text-decoration: none;
+    
+}
+
+@media (prefers-reduced-motion: reduce)
+.btn {
+    transition: none;
+}
+
+.navbar
+{
+  background-color: grey;
+  border: 2px solid black;
+  border-radius: 0;
+  padding: 6px;
+  font-weight: bold;
 }
 
 .chicken
