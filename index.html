@@ -1,58 +1,316 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/styles.css">
-<title>Module 3 Assignment</title>
-
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bazar Online Shop</title> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
 <body>
-
-<header>
+  <header>
     <nav id = "header-nav" class = "navbar navbar-default">
       <div class = "container">
         <div class = "navbar-header">
-          <div class = "navbar-brand">
-            <span> Food, LLC </span>
+          
+          <select class = "currency">
+            <option>USD</option>
+            <option>UAH</option>
+            <option>RUS</option>
+            <option>EUR</option>
+          </select>
+
+          <span style = "float:left"> | </span>
+
+          <select class = "language">
+            <option>English</option>
+            <option>Ukrainian</option>
+            <option>Русский</option>
+            <option>Deutsch</option>
+          </select>
+
+          <span style = "float:left"> | </span>
+
+          <select class = "help">
+            <option>Help</option>
+            <option>Address</option>
+            <option>Fill in the Form</option>
+          </select>
+
+            <a href = "index.html"> <h1> </h1> </a>
+            
+        </div>
+
+      <div id="collapsable-nav" class="collapse navbar-collapse">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                <span style = "font-size: 14px" class="glyphicon glyphicon glyphicon-user"></span> Login</a>
+            </li>
+            <li>
+              <a href="#">
+                <span style = "font-size: 14px" class="glyphicon glyphicon-lock"></span> Register</a>
+            </li>
+          </ul><!-- #nav-list -->
+
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                      
+          </button>
+
+        </div><!-- .collapse .navbar-collapse -->
+
+
+      </div><!-- .container -->
+
+    </nav><!-- #header-nav -->
+
+    <div class = "poster">
+
+      <a href="index.html" class="pull-center text-center"><img src="/images/logo.png"></a>
+
+      <div id="call-btn">
+       <a class="btn" href="tel:2300-3560-222">
+        <span class="glyphicon glyphicon-phone"></span>
+         <span style = "color: white;"> 2300 - 3560 - 222 </span>
+       </a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <div class = "navigation">
+
+    <div class="topnav">
+
+        <select id="dropdown">
+          <option value="select-category">Select a category</option>
+          <option value="furniture">Furniture</option>
+           <option value="chair">Chair</option>
+          <option value="other-resources">Other Resources</option>
+           <option value="random">Random</option>
+        </select>
+
+      <div class="search-container">
+        <form action="/action_page.php">
+         <input type="text" placeholder="Search products.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      
+      <a class = "blog">Blog</a>
+      <a class="bedroom">Bedroom</a>
+      <a class="sofa">Sofa</a>
+      <a class="tabl">Table</a>
+      <a class="chair">Chair</a>
+      <a class="furniture">Furniture</a>
+      <a class="active" href="#home">Home</a>
+    </div>
+
+  <div>
+
+  <div id="main-content" class="container">
+    <p id = "mainbody">
+
+      <span id = "furniture"> FURNITURE </span>
+      <div id = "firstframe" style = "height: 630px">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="images/f1.png">
+          <img class="mySlides" src="images/f2.png" style="display:none">
+          <img class="mySlides" src="images/f3.png" style="display:none">
+
+          <div class="w3-row-padding w3-section">
+            <div class="w3-col s4">
+              <img class="demo w3-opacity w3-hover-opacity-off" src="images/f1.png" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+            </div>
+
+            <div class="w3-col s4">
+              <img class="demo w3-opacity w3-hover-opacity-off" src="images/f2.png" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+            </div>
+
+            <div class="w3-col s4">
+              <img class="demo w3-opacity w3-hover-opacity-off" src="images/f3.png" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+            </div>
+
           </div>
-      	</div>
 
-      	<button class="visible-xs btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3 collapsed" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button>
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 
-  	  </div>
-	</nav>
-</header>
+          </div>
+          <div id = "prodName"> Modern Kitchen </div>
+        </br>
+          <p id = "stars">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          </p>
+          <hr>
 
-<h1>Our Menu</h1>
+            <script>
+              var slideIndex = 1;
+              showDivs(slideIndex);
 
-<div class="row">
-  <div class="col-lg-4 col-md-6 col-sm-12">
-  <section>
-  	<h2 class = "chicken"> Chicken </h2>
-  	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </section>
+              function currentDiv(n) 
+              {
+                showDivs(slideIndex = n);
+              }
+
+              function plusDivs(n) 
+              {
+                showDivs(slideIndex += n);
+              }
+
+              function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) 
+              {
+                  x[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++)
+              {
+                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+              }
+              x[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " w3-opacity-off";  
+}
+            </script>
+
+            <p style = "font-size: 18px"> <strike style = "color: black; margin-left: 22px"> $500.00</strike> <span id = "discount"> $300.00 </span> </p>
+
+            <hr>
+
+            <button style = "background-color: orange; margin-left: 20px; padding: 5px" class = "fa fa-shopping-cart"> ADD TO CART </button>
+            <p style = "color: black; margin-left: 15px; margin-top: 40px; display: inline;"> Quantity: </p>
+
+            <input type="number" id="quantity" min="1" max="100" style = "color: black; display: inline;">
+
+            <hr>
+
+            <h4 style = "color: black; font-weight: bold; margin-left: 22px; display: inline;"> Quick Review: </h4>
+            <p style = "color: black; margin-left: 480px; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+            <hr>
+
+            <p style = "color: black; margin-left: 480px;"> <span style = "font-weight: bold"> Availability: </span> In Stock </p>
+
+            <p style = "color: black; margin-left: 480px;"> <span style = "font-weight: bold"> Category: </span> Furniture </p>
+
+            <hr>
+
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+            </a>
+    
+    <!-- Google+ -->
+            <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+                <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+           </a>
+
+     <!-- Twitter -->
+           <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+           </a>
+    
+    <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+                <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+           </a>
+    
+    <!-- Pinterest -->
+           <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+               <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+           </a>
+
+
+
+
+      </div>
+
+    </p>
+
   </div>
-  <div class="col-lg-4 col-md-6 col-sm-12">
-  	<section>
-	<h2 class = "beef"> Beef </h2>
-  	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </section>
-  </div>
-  <div class="col-lg-4 col-md-12 col-sm-12">
-  	<section>
-  	<h2 class = "suchi"> Suchi </h2>
-  	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </section>
-  </div>
-</div>
 
-<!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <footer class="panel-footer social-footer">
+    <div class="container">
+      <div class="row">
+        <section id="info1" class="col-sm-3">
+          <span>INFORMATION</span><br>
+          <p>
+          About us<br>
+          Privacy<br>
+          Conditions<br>
+          Online support<br>
+          </p>
+          <hr class="visible-xs">
+        </section>
+        <section id="account" class="col-sm-3">
+          <span>MY ACCOUNT</span><br>
+          Login<br>
+          My Cart<br>
+          Wishlist<br>
+          Checkout<br>
+          <hr class="visible-xs">
+        </section>
+        <section id="info2" class="col-sm-3">
+          <span>INFORMATION</span><br>
+          Specials<br>
+          New Products<br>
+          Best Sellers<br>
+          Our Stores<br>
+          <hr class="visible-xs">
+        </section>
+        <section id="orders" class="col-sm-3">
+          <span>ORDERS</span><br>
+          Payment Options<br>
+          Shipping and Delivery<br>
+          Returns <br>
+          Shipping<br>
+        </section>
+      </div>
+    </div>
+
+
+    <div id="lab_social_icon_footer">
+
+      <div class = "container">
+
+        <div class="text-center center-block">
+
+        <span style = "padding-top: 24px; text-align: center" class="text-center">&copy; Copyright 2019 Bazar | All rights Reserved</span>
+
+          <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
+
+          <a href="https://www.facebook.com/konstantin.krokhin"> <i id = "social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
+
+          <a href="https://youtube.com"><i id="social-yt" class="fa fa-youtube fa-2x social"></i></a>
+              
+          <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-2x social"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
-
 </body>
 </html>
