@@ -2,9 +2,16 @@ body
 {
   font-size: 16px;
   color: #fff;
-  background-color: #666666;
+  background-color: white;
   font-family: 'Oxygen', sans-serif;
 }
+
+/** Login / Register Styling **/
+
+
+
+/** END Login/Register **/
+
 
 p
 {
@@ -15,72 +22,7 @@ p
 {
   height: 250px;
 }
-#firstframe
-{
-  margin-top: -200px;
-  background-color: white;
-  height: 800px;
-}
 
-#prodName
-{
-  display: block;
-  font-size: 18px;
-  color: black;
-  float: left;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding-top: 5px;
-  padding-left: 20px;
-}
-
-.fa-star
-{
-  display: block;
-  color: grey;
-}
-
-.checked
-{
-  color: black;
-}
-
-#stars
-{
-  display: inline;
-  float: none;
-  width: 100px;
-  margin-left: -185px;
-}
-
-hr
-{
-  border-width: 30px;
-}
-
-#discount
-{
-  background-color: black;
-}
-
-.mySlides 
-{
-  display:none;
-  width: 100%;
-}
-
-.w3-content, .w3-display-container
-{
-  width: 40%;
-  float: left;
-}
-
-#furniture
-{
-  background-color: #666666;
-  font-size: 20px;
-  font-family: 'Lora', sans-serif;
-}
 
 /** HEADER**/
 #header-nav  
@@ -166,6 +108,143 @@ hr
   background-color: black;
 }
 /* END HEADER */
+
+/* MAIN CONTENT */
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: white;
+  color: black;
+  float: left;
+  border-right: 1px;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Description, #Reviews, #Specif, #Custom
+{
+  background-color: white;
+  color: black;
+}
+
+#firstframe
+{
+  margin-top: -200px;
+  background-color: white;
+  height: 800px;
+  border: 1px solid black;
+}
+
+#secondframe
+{
+  margin-top: 50px;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 580px;
+}
+
+#thirdframe
+{
+  margin-top: 50px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  height: 480px;
+}
+
+
+#prodName
+{
+  display: block;
+  font-size: 18px;
+  color: black;
+  float: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+
+.fa-star
+{
+  display: block;
+  color: grey;
+}
+
+.checked
+{
+  color: black;
+}
+
+#stars
+{
+  display: inline;
+  float: none;
+  width: 100px;
+  margin-left: -185px;
+}
+
+.checked2
+{
+  color: orange;
+}
+
+hr
+{
+  border-width: 30px;
+}
+
+#discount
+{
+  background-color: black;
+}
+
+.mySlides 
+{
+  display:none;
+  width: 100%;
+}
+
+.w3-content, .w3-display-container
+{
+  width: 40%;
+  float: left;
+}
+
+#furniture
+{
+  background-color: #666666;
+  font-size: 20px;
+  font-family: 'Lora', sans-serif;
+}
+
+/* END MAIN CONTENT */
 
 /* FOOTER */
 .panel-footer {
@@ -260,7 +339,8 @@ form{
  .topnav .search-container button 
 {
   height: 25%;
-  width: 13%;
+  width: 18%;
+  font-size: 3px;
 }
 
 .topnav a 
@@ -275,7 +355,9 @@ form{
   padding: 14px 16px;
   text-decoration: none;
   font-size: 0.9vw;
+  margin-right: -10px;
 }
+
 
 .topnav input[type=text] 
 {
@@ -299,16 +381,29 @@ form{
 /********** Large and Medium *********/
 @media (max-width: 1364px)
 {
-  .topnav .search-container button 
+
+.topnav .search-container 
 {
-  height: 25%;
-  width: 6%;
+  float: left;
+  margin-left: 6%;
+}
+
+form{
+  margin-top: -10px;
+  width: 106%;
+}
+
+ .topnav .search-container button 
+{
+  height: 22%;
+  width: 15%;
 }
 
 .topnav a 
 {
   width: 7%;
   float: right;
+  display: block;
   text-transform: uppercase;
   color: black;
   font-weight: bold;
@@ -316,17 +411,16 @@ form{
   padding: 14px 16px;
   text-decoration: none;
   font-size: 0.9vw;
-}
-  .topnav .search-container 
-{
-  float: left;
-  margin-left: 15%;
-  font-size: 30%;
+  margin-right: -10px;
 }
 
 .topnav input[type=text] 
 {
-  font-size: 1.5vw;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 1.6vw;
+  border: none;
+  color: black;
 }
 
 }
@@ -337,7 +431,7 @@ form{
 
   .topnav .search-container 
 {
-  margin-left: 20%;
+  margin-left: 2%;
   font-size: 30%;
 }
   .topnav input[type=text] 

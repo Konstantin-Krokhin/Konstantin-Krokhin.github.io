@@ -51,11 +51,69 @@
            <ul id="nav-list" class="nav navbar-nav navbar-right">
             <li>
               <a href="#">
-                <span style = "font-size: 14px" class="glyphicon glyphicon glyphicon-user"></span> Login</a>
+                <span style = "font-size: 20px" class="glyphicon glyphicon glyphicon-user" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> Login</span>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" >
+    
+
+    <div class="container" style = "color: black">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1; text-align: center">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style = "color: black;">Cancel</button>
+      <span class="psw" style = "color: black;"><a href="#" style = "color: black;">Forgot password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
             </li>
             <li>
               <a href="#">
-                <span style = "font-size: 14px" class="glyphicon glyphicon-lock"></span> Register</a>
+                <span style = "font-size: 20px" class="glyphicon glyphicon glyphicon-lock" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"> Register </span>
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" >
+    
+
+    <div class="container" style = "color: black">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Register</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1;">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn" style = "color: black;">Cancel</button>
+    </div>
+  </form>
+</div>
             </li>
           </ul><!-- #nav-list -->
 
@@ -106,22 +164,22 @@
         </form>
       </div>
       
-      <a class = "blog">Blog</a>
-      <a class="bedroom">Bedroom</a>
+      <a class = "blog" style = "width: 5%; padding-left: 12px; margin-left: 14px">Blog</a>
+      <a class="bedroom" style = "width: 8%; padding-right: 18px;">Bedroom</a>
       <a class="sofa">Sofa</a>
       <a class="tabl">Table</a>
       <a class="chair">Chair</a>
-      <a class="furniture">Furniture</a>
+      <a class="furniture" style = "width: 10%">Furniture</a>
       <a class="active" href="#home">Home</a>
     </div>
 
-  <div>
+  <div style = "background-color: #666666; height: 350px">
 
-  <div id="main-content" class="container">
-    <p id = "mainbody">
+  <div id="main-content" class="container" >
+    <p id = "mainbody" >
 
       <span id = "furniture"> FURNITURE </span>
-      <div id = "firstframe" style = "height: 630px">
+      <div id = "firstframe" style = "height: 630px" >
 
         <div class="w3-content w3-display-container">
           <img class="mySlides" src="images/f1.png">
@@ -157,39 +215,6 @@
           <span class="fa fa-star"></span>
           </p>
           <hr>
-
-            <script>
-              var slideIndex = 1;
-              showDivs(slideIndex);
-
-              function currentDiv(n) 
-              {
-                showDivs(slideIndex = n);
-              }
-
-              function plusDivs(n) 
-              {
-                showDivs(slideIndex += n);
-              }
-
-              function showDivs(n) {
-              var i;
-              var x = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("demo");
-              if (n > x.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = x.length}
-              for (i = 0; i < x.length; i++) 
-              {
-                  x[i].style.display = "none";
-              }
-              for (i = 0; i < dots.length; i++)
-              {
-                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-              }
-              x[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " w3-opacity-off";  
-}
-            </script>
 
             <p style = "font-size: 18px"> <strike style = "color: black; margin-left: 22px"> $500.00</strike> <span id = "discount"> $300.00 </span> </p>
 
@@ -238,14 +263,74 @@
                <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
            </a>
 
+      </div> <!-- firstframe -->
 
+      <div id = "secondframe">
 
+        <button class="tablink" onclick="openPage('Description', this)">Description</button>
+        <button class="tablink" onclick="openPage('Reviews', this)" id="defaultOpen">Reviews</button>
+        <button class="tablink" onclick="openPage('Specif', this)">Specification</button>
+        <button class="tablink" onclick="openPage('Custom', this)">Custom Tab</button>
 
-      </div>
+        <div id="Description" class="tabcontent">
+          <h3>Description</h3>
+          <p>Description of the product....</p>
+        </div>
 
-    </p>
+        <div id="Reviews" class="tabcontent">
+          <p style = "font-weight: normal;">There are no reviews for this product.</p> <br>
+          <p> Add a review </p> <br>
+          <p style = "font-weight: normal;"> Your Rating </p>
 
-  </div>
+          <p id = "stars2">
+          <span style = "font-weight: normal;"> <i> Bad </i> </span>
+          <span class="fa fa-star checked2"></span>
+          <span class="fa fa-star checked2"></span>
+          <span class="fa fa-star checked2"></span>
+          <span class="fa fa-star checked2"></span>
+          <span class="fa fa-star checked2"></span>
+          <span style = "font-weight: normal;"> <i> Good </i> </span>
+          </p>
+          <br>
+          <p> Your Review </p>
+          <form>
+            <input type = "text" style = "width: 94%; height: 100px;">
+            <br> <br>
+            <input type = "text" value = "Name*" style = "font-weight: normal; color: grey; height: 30px">
+            <input type = "text" value = "Email*" style = "font-weight: normal; color: grey; height: 30px">
+            <input type = "submit" value = "Continue" style = "background-color: black; color: white; padding: 4px 8px; border: none">
+          </form>
+
+        </div>
+
+        <div id="Specif" class="tabcontent">
+          <h3>Specification</h3>
+          <p>Specifications about the product</p>
+        </div>
+
+        <div id="Custom" class="tabcontent">
+          <h3>Custom Tab</h3>
+          <p>Customizable tab.</p>
+        </div>
+
+      </div> <!-- secondframe -->
+
+      <div id = "thirdframe">
+
+        <span style = "text-transform: uppercase; font-weight: bold"> NEW FURNITURE </span>
+
+<!--
+        <div class="scrollmenu">
+          <a href="#home">Scandinavian Styled Kitchen</a>
+          <a href="#home">Italian Styled Kitchen</a>
+          <a href="#home">Aztek Styled Kitchen</a>
+        </div>
+-->
+      </div> <!-- thirdframe -->
+
+    </p> <!-- main-body-->
+
+  </div> <!-- main-content-->
 
   <footer class="panel-footer social-footer">
     <div class="container">
@@ -307,6 +392,58 @@
     </div>
   </footer>
 
+    <script>
+              var slideIndex = 1;
+              showDivs(slideIndex);
+
+              function currentDiv(n) 
+              {
+                showDivs(slideIndex = n);
+              }
+
+              function plusDivs(n) 
+              {
+                showDivs(slideIndex += n);
+              }
+
+              function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) 
+              {
+                  x[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++)
+              {
+                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+              }
+              x[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " w3-opacity-off";
+            }
+
+
+              function openPage(pageName,elmnt,color) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                 tabcontent[i].style.display = "none";
+               }
+               tablinks = document.getElementsByClassName("tablink");
+            
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+               }
+              document.getElementById(pageName).style.display = "block";
+               elmnt.style.backgroundColor = color;
+              }
+
+              // Get the element with id="defaultOpen" and click on it
+              document.getElementById("defaultOpen").click();
+            
+      </script>
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
