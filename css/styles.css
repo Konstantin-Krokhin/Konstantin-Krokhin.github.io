@@ -23,7 +23,7 @@ head, footer, .mainbody
 .Logo img
 {
 	margin-left: 25%;
-	background-image: url('../images/Logo.png');
+	background-image: url('../images/logo.png');
 }
 
 .poster
@@ -318,7 +318,7 @@ div .row .mid
 
 	.Logo img
 	{
-		background: url("../images/Logo_S.png") no-repeat;
+		background: url("../images/logo_s.png") no-repeat;
 		height: 37px;
 		width: 65px;
 		margin-left: 3%;
