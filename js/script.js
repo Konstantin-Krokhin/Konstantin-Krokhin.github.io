@@ -7,6 +7,7 @@ const getContent = (search) => {
   const url = new URL('https://itunes.apple.com/search');
   const params = { term: search, media: 'music', }
   url.search = new URLSearchParams(params);
+
   fetch(url, { method: 'GET'} )
     .then(results => results.json())
     .then(data => {
@@ -50,11 +51,3 @@ searchElem.addEventListener('keydown', (event) => {
     getContent(event.target.value);
   }
 });
-
-$(document).ready(function() {
-    $('#example').DataTable( {
-        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
-    } );
-} );
-
-/****************************************************************/
