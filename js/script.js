@@ -3,9 +3,12 @@ const media = document.querySelector('.media');
 const overlay = document.querySelector('.overlay');
 const searchElem = document.querySelector('.form');
 
+let pageNumber = 0;
+const itemsPerPage = 9;
+
 const getContent = (search) => {
   const url = new URL('https://itunes.apple.com/search');
-  const params = { term: search, media: 'music', }
+  const params = { term: search, media: 'music', limit: itemsPerPage, offset: pageNumber*itemsPerPage }
   url.search = new URLSearchParams(params);
 
   fetch(url, { method: 'GET'} )
@@ -27,6 +30,18 @@ const getContent = (search) => {
       .catch(() => container.innerHTML = '<h1>Sorry, no matches found</h1>');
       document.getElementById("SongsNumber").innerHTML = 0;
  }
+
+ function next()
+{
+    pageNumber += 1;
+    enterpress();
+}
+
+function prev()
+{
+  if (pageNumber > 0) pageNumber -= 1;
+  enterpress();
+}
 
 const openMedia = (url, title) => {
   if (!url) return;

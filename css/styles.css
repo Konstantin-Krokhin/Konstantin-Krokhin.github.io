@@ -20,6 +20,31 @@ head, footer, .mainbody
 
 .mainbody {height:auto;}
 
+a:hover {
+  background-color: #e6e6e6;
+  color: black;
+}
+
+.next, .previous
+{
+	background-color: orange;
+  	color: white;
+  	border-radius: 15px;
+  	display: inline-block;
+  	margin: 5px;
+  	margin-bottom: 30px
+}
+
+.previous 
+{
+  	padding: 6px 15px;
+}
+
+.next 
+{
+  	padding: 6px 15px;
+}
+
 .Logo img
 {
 	margin-left: 25%;
@@ -36,6 +61,7 @@ head, footer, .mainbody
 .mainbody
 {
 	height: 100%;
+	text-align: center
 }
 
 hr
@@ -130,6 +156,12 @@ div .row .mid
 .container div:nth-child(2n) hr {
     width: 150px;
   }
+
+.container div
+{
+	max-height: 400px;
+	overflow:hidden;
+}
 
 .result {
   width: 150px;
